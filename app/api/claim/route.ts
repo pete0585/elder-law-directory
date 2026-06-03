@@ -53,6 +53,7 @@ export async function POST(req: NextRequest) {
     from: process.env.RESEND_FROM_EMAIL!,
     to: email,
     subject: `Verify your claim — ${listing.full_name} on ElderLawyerDirectory.com`,
+    trackClicks: false,
     html: `
       <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #FAF8F5;">
         <div style="background: #2B4C7E; padding: 20px 24px; border-radius: 8px 8px 0 0;">
