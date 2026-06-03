@@ -179,3 +179,42 @@ export async function getAllSlugs(): Promise<string[]> {
   if (error) return []
   return data?.map((r) => r.slug) ?? []
 }
+
+export async function getListingsByCityAndState(city: string, state: string): Promise<Listing[]> {
+  const supabase = await createClient()
+  const { data, error } = await supabase
+    .from('elder_listings')
+    .select('*')
+    .ilike('city', city)
+    .eq('state', state.toUpperCase())
+    .eq('is_active', true)
+    .eq('is_approved', true)
+    .order('listing_tier', { ascending: false })
+    .order('full_name', { ascending: true })
+    .limit(30)
+
+  if (error) return []
+  return (data as Listing[]) ?? []
+}
+
+export async function getTopCitiesInState(state: string): Promise<{ city: string; count: number }[]> {
+  const supabase = await createClient()
+  const { data, error } = await supabase
+    .from('elder_listings')
+    .select('city')
+    .eq('state', state.toUpperCase())
+    .eq('is_active', true)
+    .eq('is_approved', true)
+
+  if (error || !data) return []
+
+  const counts: Record<string, number> = {}
+  for (const row of data) {
+    if (row.city) counts[row.city] = (counts[row.city] ?? 0) + 1
+  }
+
+  return Object.entries(counts)
+    .map(([city, count]) => ({ city, count }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 12)
+}
