@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-surface text-gray-900;
+  }
+}
+
+@layer components {
+  .prose-guide {
+    @apply max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+  }
+  .prose-guide h1 {
+    @apply text-3xl font-bold text-gray-900 mb-6;
+  }
+  .prose-guide h2 {
+    @apply text-xl font-bold text-gray-900 mt-10 mb-4;
+  }
+  .prose-guide p {
+    @apply text-gray-700 leading-relaxed mb-4;
+  }
+  .prose-guide ul {
+    @apply list-disc pl-6 mb-4 text-gray-700 space-y-1;
+  }
+}
