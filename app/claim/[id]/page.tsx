@@ -3,6 +3,7 @@
 import { useState, useEffect, use } from 'react'
 import Link from 'next/link'
 import { Scale, CheckCircle, Loader2, AlertCircle, Star } from 'lucide-react'
+import { createClient } from '@supabase/supabase-js'
 
 interface PageProps {
   params: Promise<{ id: string }>
@@ -19,6 +20,7 @@ export default function ClaimPage({ params, searchParams }: PageProps) {
   const [submitting, setSubmitting] = useState(false)
   const [verifyState, setVerifyState] = useState<'idle' | 'verifying' | 'success' | 'error'>('idle')
   const [showUpgrade, setShowUpgrade] = useState(false)
+  const [monthlyViews, setMonthlyViews] = useState(0)
 
   useEffect(() => {
     if (token) {
@@ -39,6 +41,15 @@ export default function ClaimPage({ params, searchParams }: PageProps) {
       setShowUpgrade(true)
     }
   }, [token, id, verified])
+
+  useEffect(() => {
+    const monthStart = new Date(new Date().getFullYear(), new Date().getMonth(), 1).toISOString()
+    createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
+      .from('listing_views').select('*', { count: 'exact', head: true })
+      .eq('directory_slug', 'elder-law').eq('listing_id', id)
+      .gte('viewed_at', monthStart)
+      .then(({ count }) => setMonthlyViews(count ?? 0))
+  }, [id])
 
   async function handleClaim(e: React.FormEvent) {
     e.preventDefault()
@@ -107,6 +118,20 @@ export default function ClaimPage({ params, searchParams }: PageProps) {
           <p className="text-gray-600">
             Your profile is now claimed. Upgrade to Verified to start receiving inquiries from families who need exactly what you offer.
           </p>
+        </div>
+
+        <div className='text-center mb-6'>
+          <div className='text-5xl font-bold text-gray-900'>{monthlyViews ?? 0}</div>
+          <div className='text-gray-500 mt-1'>people viewed your profile this month</div>
+          <div className='mt-3 text-red-600 font-semibold'>0 could contact you — your phone and website are hidden</div>
+        </div>
+        <div className='space-y-3 mb-6 text-left'>
+          {[['Your phone number visible to searchers','They can call you directly'],['Your website linked','Drive traffic to your practice site'],['Your full bio displayed','Build trust before they reach out'],['Verified badge','Stand out from unclaimed profiles']].map(([title, sub]) => (
+            <div key={title} className='flex items-start gap-3'>
+              <span className='text-green-500 text-lg'>✓</span>
+              <div><div className='font-medium'>{title}</div><div className='text-sm text-gray-500'>{sub}</div></div>
+            </div>
+          ))}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

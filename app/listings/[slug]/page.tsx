@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation'
 import ListingDetail from '@/components/ListingDetail'
 import { getListingBySlug } from '@/lib/data'
 import { STATE_NAMES } from '@/lib/utils'
+import { createClient } from '@/lib/supabase/server'
+import { ViewTracker } from '@/components/ViewTracker'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -40,5 +42,17 @@ export default async function ListingPage({ params }: PageProps) {
 
   if (!listing) notFound()
 
-  return <ListingDetail listing={listing} />
+  const isClaimed = listing.listing_tier !== 'unclaimed' && listing.listing_tier != null
+  const monthStart = new Date(new Date().getFullYear(), new Date().getMonth(), 1).toISOString()
+  const supabase = await createClient()
+  const { count: viewCount } = await supabase.from('listing_views').select('*', { count: 'exact', head: true })
+    .eq('directory_slug', 'elder-law').eq('listing_id', String(listing.id)).gte('viewed_at', monthStart)
+  const monthlyViews = viewCount ?? 0
+
+  return (
+    <>
+      <ListingDetail listing={listing} monthlyViews={monthlyViews} isClaimed={isClaimed} />
+      <ViewTracker listingId={String(listing.id)} directorySlug='elder-law' />
+    </>
+  )
 }
