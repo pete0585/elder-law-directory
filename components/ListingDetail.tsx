@@ -5,11 +5,14 @@ import { PRACTICE_AREAS, STATE_NAMES, formatPhone } from '@/lib/utils'
 
 interface ListingDetailProps {
   listing: Listing
+  monthlyViews?: number
+  isClaimed?: boolean
 }
 
-export default function ListingDetail({ listing }: ListingDetailProps) {
+export default function ListingDetail({ listing, monthlyViews = 0, isClaimed: isClaimedProp }: ListingDetailProps) {
   const isFeatured = listing.listing_tier === 'featured'
   const isVerified = listing.listing_tier === 'verified' || isFeatured
+  const isClaimed = isClaimedProp ?? (listing.listing_tier !== 'unclaimed' && listing.listing_tier != null)
   const location = `${listing.city}, ${STATE_NAMES[listing.state] ?? listing.state}`
 
   const jsonLd = {
@@ -123,12 +126,12 @@ export default function ListingDetail({ listing }: ListingDetailProps) {
           </div>
 
           {/* Bio */}
-          {listing.bio && (
+          {isClaimed && listing.bio ? (
             <div className="bg-white rounded-xl border border-surface-border shadow-sm p-6">
               <h2 className="font-bold text-gray-900 mb-3">About</h2>
               <p className="text-gray-700 leading-relaxed whitespace-pre-line">{listing.bio}</p>
             </div>
-          )}
+          ) : null}
 
           {/* Practice Areas */}
           {listing.practice_areas.length > 0 && (
@@ -162,6 +165,18 @@ export default function ListingDetail({ listing }: ListingDetailProps) {
             </div>
           )}
 
+          {/* Profile Activity Stats */}
+          {isClaimed && (
+            <div className='mb-6 rounded-xl border border-blue-200 bg-blue-50 p-4'>
+              <p className='text-xs font-semibold uppercase tracking-wide text-blue-600'>Profile Activity</p>
+              <p className='mt-1 text-3xl font-bold text-blue-900'>{monthlyViews}</p>
+              <p className='text-sm text-blue-700'>people viewed your profile this month</p>
+              {listing.listing_tier === 'free' && (
+                <p className='mt-2 text-xs text-blue-600'>0 could contact you. <a href={`/claim/${listing.id}?upgrade=true`} className='underline font-medium'>Upgrade to be reachable →</a></p>
+              )}
+            </div>
+          )}
+
           {/* FAQ — Elder Law Educational Block */}
           <div className="bg-surface border border-surface-border rounded-xl p-6">
             <h2 className="font-bold text-gray-900 mb-4">What Does an Elder Law Attorney Do?</h2>
@@ -188,7 +203,7 @@ export default function ListingDetail({ listing }: ListingDetailProps) {
           <div className="bg-white rounded-xl border border-brand-slate shadow-sm p-6">
             <h2 className="font-bold text-gray-900 mb-4">Contact</h2>
             <div className="space-y-3">
-              {listing.phone && (
+              {isClaimed && listing.phone && (
                 <a
                   href={`tel:${listing.phone}`}
                   className="flex items-center gap-3 text-sm text-gray-700 hover:text-brand-slate transition-colors group"
@@ -198,6 +213,14 @@ export default function ListingDetail({ listing }: ListingDetailProps) {
                   </div>
                   {formatPhone(listing.phone)}
                 </a>
+              )}
+              {!isClaimed && (
+                <div className='rounded-lg border border-gray-200 bg-gray-50 p-4 text-center'>
+                  <p className='text-sm text-gray-500'>Phone, website, and bio are only visible after this provider claims their listing.</p>
+                  <a href={`/claim/${listing.id}`} className='mt-2 inline-block text-sm font-medium text-blue-600 hover:underline'>
+                    Is this you? Claim your free profile →
+                  </a>
+                </div>
               )}
               {listing.email && isVerified && (
                 <a
@@ -210,7 +233,7 @@ export default function ListingDetail({ listing }: ListingDetailProps) {
                   <span className="truncate">{listing.email}</span>
                 </a>
               )}
-              {listing.website && isVerified && (
+              {isClaimed && listing.website && isVerified && (
                 <a
                   href={listing.website}
                   target="_blank"

@@ -20,6 +20,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: message }, { status: 400 })
   }
 
+  const HANDLED_EVENTS = new Set(['checkout.session.completed'])
+  if (!HANDLED_EVENTS.has(event.type)) { return NextResponse.json({ received: true }) }
+
   const supabase = await createServiceClient()
 
   try {
