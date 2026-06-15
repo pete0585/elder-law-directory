@@ -1,4 +1,4 @@
-export type ListingTier = 'free' | 'verified' | 'featured'
+export type ListingTier = 'unclaimed' | 'free' | 'verified' | 'featured'
 
 export interface Listing {
   id: string
