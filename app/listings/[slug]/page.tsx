@@ -42,7 +42,7 @@ export default async function ListingPage({ params }: PageProps) {
 
   if (!listing) notFound()
 
-  const isClaimed = listing.listing_tier !== 'unclaimed' && listing.listing_tier != null
+  const isClaimed = (listing.listing_tier as string | null) !== 'unclaimed' && listing.listing_tier != null
   const monthStart = new Date(new Date().getFullYear(), new Date().getMonth(), 1).toISOString()
   const supabase = await createClient()
   const { count: viewCount } = await supabase.from('listing_views').select('*', { count: 'exact', head: true })
