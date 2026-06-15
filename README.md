@@ -29,13 +29,13 @@ All vars are already set in Vercel. This is for local dev only.
 | `SUPABASE_SERVICE_ROLE_KEY` | (from bootstrap output) |
 | `NEXT_PUBLIC_SITE_URL` | `https://elderlawyerdirectory.com` |
 | `STRIPE_SECRET_KEY` | (from bootstrap output) |
-| `STRIPE_WEBHOOK_SECRET` | `whsec_UuDwFDVtrQtfH8zjB0iyDMT1VEVl783a` |
+| `STRIPE_WEBHOOK_SECRET` | `[REDACTED-last4=783a]` |
 | `STRIPE_VERIFIED_PRICE_ID` | `price_1TduqsGzK9SiblueIHdMkZxF` |
 | `STRIPE_FEATURED_PRICE_ID` | `price_1TduqtGzK9Siblue6eE7CIGu` |
 | `RESEND_API_KEY` | (from bootstrap output) |
 | `RESEND_FROM_EMAIL` | `hello@mail.elderlawyerdirectory.com` |
 | `NEXT_PUBLIC_DIRECTORY_SLUG` | `elder-law` |
-| `INBOUND_WEBHOOK_SECRET` | `whsec_emuPZUjWA8sBrIS+u25YvBIjVW2NQKoi` |
+| `INBOUND_WEBHOOK_SECRET` | `[REDACTED-last4=KQoi]` |
 
 ---
 
