@@ -233,6 +233,104 @@ const GUIDES: Record<string, Guide> = {
     ],
     cta: 'Ready to find an elder law attorney? Our directory makes it free to search and contact elder law specialists near you. Browse by city, state, and practice area.',
   },
+
+  'what-does-elder-law-attorney-do': {
+    slug: 'what-does-elder-law-attorney-do',
+    title: 'What Does an Elder Law Attorney Do? A Complete Guide',
+    metaTitle: 'What Does an Elder Law Attorney Do? A Complete Guide | ElderLawyerDirectory.com',
+    metaDescription: 'Elder law attorneys handle Medicaid planning, guardianship, powers of attorney, veterans benefits, and elder abuse protection. A complete guide to what they do and when you need one.',
+    intro: 'Most people first call an elder law attorney when a crisis is already underway — a parent has dementia, a nursing home placement is urgent, or assets need protection before Medicaid kicks in. Understanding what elder law attorneys do before you need one is how you avoid the most expensive and stressful version of this situation.',
+    sections: [
+      {
+        heading: 'Estate Planning for Seniors',
+        body: 'Estate planning for seniors goes beyond writing a will. An elder law attorney helps seniors structure documents for the reality of aging: cognitive decline, incapacity, and the need for others to manage finances and medical decisions.\n\nThe core documents are a durable financial power of attorney (designating someone to handle finances if incapacitated), a healthcare proxy or healthcare power of attorney (designating someone to make medical decisions), a living will or advance directive (documenting end-of-life wishes), and a will. These documents must be executed while the person still has legal capacity — a frequently missed window. Generic online templates often lack the provisions needed for Medicaid applications, retirement account management, or real estate transactions.\n\nFor seniors with significant assets, an elder law attorney typically adds a revocable living trust to avoid probate and provide continuity of asset management without court involvement during incapacity.',
+      },
+      {
+        heading: 'Medicaid Planning',
+        body: 'Medicaid planning is the most time-sensitive and often highest-stakes work in elder law. Medicaid pays for nursing home care for people who can no longer afford it — but qualifying requires navigating complex income and asset rules, and the average nursing home costs $7,000-10,000/month.\n\nAn elder law attorney structures assets and income to qualify for Medicaid while protecting as much as possible for a healthy spouse or heirs. This includes Medicaid Asset Protection Trusts (MAPTs), income-only trusts for income-cap states, spousal asset allocation strategies, caregiver agreements that convert care into compensated services, and timing strategies to minimize lookback penalties.\n\nThe 5-year lookback rule means that asset transfers made within 60 months of applying for Medicaid can create a penalty period of ineligibility. Planning must happen before the clock closes — or, if a crisis has already arrived, an experienced elder law attorney can often find legal strategies that remain available even under time pressure.',
+      },
+      {
+        heading: 'Guardianship and Conservatorship',
+        body: 'When a person becomes incapacitated — through dementia, stroke, or another condition — without having established a durable power of attorney while competent, the family has no automatic legal authority to act. Banks will not release funds. Medical facilities will not share information. Decisions cannot be made.\n\nGuardianship (authority over personal and medical decisions) or conservatorship (authority over finances) provides this authority through a court proceeding. Elder law attorneys file the petition, navigate probate court, obtain required medical assessments, and represent the family through the process.\n\nGuardianship is expensive, public, and requires ongoing court oversight. It costs far more than proactive planning — which is why elder law attorneys emphasize getting powers of attorney in place before incapacity arrives.',
+      },
+      {
+        heading: 'Veterans Benefits and Elder Law',
+        body: 'VA Aid and Attendance is a pension benefit that pays up to $2,727/month for a married veteran, $1,794/month for a single veteran, or $1,154/month for a surviving spouse — available to wartime veterans who need help with activities of daily living. This benefit is substantially underutilized because many families do not know it exists or do not understand the eligibility rules.\n\nElder law attorneys experienced in VA benefits can identify eligible veterans, prepare the application, and — critically — manage the interaction between VA benefits and Medicaid planning. The VA and Medicaid have different asset rules, and asset transfers that optimize one program can create problems for the other. Sequencing both correctly requires attorneys who understand both systems.',
+      },
+      {
+        heading: 'Elder Abuse and Financial Exploitation',
+        body: 'Elder law attorneys can intervene when an older person is being financially exploited or abused — by a family member, caregiver, or third party. This may involve petitioning for guardianship or conservatorship to remove control from an exploitative party, reporting to Adult Protective Services, filing civil claims to recover improperly transferred assets, and working with law enforcement when criminal conduct is involved.\n\nFinancial exploitation of the elderly is the most common form of elder abuse and is frequently perpetrated by family members or trusted individuals. Elder law attorneys help families navigate both the legal remedies and the emotionally difficult dynamics involved.',
+      },
+    ],
+    faqs: [
+      {
+        q: 'Do I need an elder law attorney or an estate planning attorney?',
+        a: 'For routine estate planning — a will, basic trust, powers of attorney — a general estate planning attorney is often adequate. For anything involving Medicaid planning, nursing home care coordination, guardianship, or VA benefits, you need an elder law specialist. The two practices overlap but are not identical: an estate planning attorney focuses on asset transfer after death; an elder law attorney focuses on legal and financial protection during aging and incapacity. If your parent is within 5 years of potentially needing Medicaid, find an elder law specialist.',
+      },
+      {
+        q: 'When should I first consult an elder law attorney?',
+        a: 'The best time is 5-7 years before you anticipate needing Medicaid for long-term care — when all planning options are still available and no lookback window has started. The second-best time is now, regardless of where you are in the timeline. Crisis planning inside the 5-year lookback window is harder and more expensive than proactive planning, but it is almost always better than no planning at all. If a parent has just been diagnosed with dementia or another condition associated with cognitive decline, schedule a consultation immediately while they still have legal capacity.',
+      },
+      {
+        q: 'How much does an elder law attorney cost?',
+        a: 'Elder law attorneys typically use flat-fee billing for defined services. An elder law estate plan (durable POA, healthcare proxy, living will, will) runs $2,500-7,000 depending on market and complexity. A Medicaid Asset Protection Trust adds $2,500-5,500. Medicaid application assistance runs $1,500-4,000 for straightforward cases, $5,000-15,000+ for complex crisis planning. Guardianship proceedings run $3,000-10,000+. The ROI calculation almost always favors paying an elder law attorney: the cost of planning is typically a fraction of the assets protected.',
+      },
+      {
+        q: 'What is a Certified Elder Law Attorney (CELA)?',
+        a: 'CELA is a credential issued by the National Elder Law Foundation (NELF), recognized by the American Bar Association. CELAs must demonstrate substantial experience in elder law, pass a comprehensive exam, complete continuing education requirements, and be recertified periodically. Not all excellent elder law attorneys are CELAs — but CELA designation is a meaningful credential when evaluating attorneys, particularly in markets with many practitioners claiming elder law expertise.',
+      },
+    ],
+    cta: 'Ready to find an elder law attorney in your area? Search our directory by city and state to find attorneys specializing in Medicaid planning, guardianship, and elder care.',
+  },
+
+  'medicaid-planning-elder-law': {
+    slug: 'medicaid-planning-elder-law',
+    title: 'Medicaid Planning: What Elder Law Attorneys Do to Protect Your Assets',
+    metaTitle: 'Medicaid Planning: How Elder Law Attorneys Protect Assets | ElderLawyerDirectory.com',
+    metaDescription: 'Medicaid planning uses legal strategies to qualify for long-term care coverage while protecting assets. Learn the 5-year lookback, exempt assets, legal planning tools, and when to start.',
+    intro: 'Medicaid planning is the legal process of structuring assets and income so a person can qualify for Medicaid long-term care benefits while protecting as much as possible for a spouse or heirs. It is not Medicaid fraud — it is the same legal planning that exists in every area of tax and benefits law. Here is how it works.',
+    sections: [
+      {
+        heading: 'What Is Medicaid Planning?',
+        body: 'Medicaid planning is the use of legal strategies — trusts, asset restructuring, spousal transfers, and timing — to help a person qualify for Medicaid long-term care benefits without spending down every asset they own. Medicaid is a means-tested benefit: it requires income and assets to be below specific thresholds before it pays for nursing home care.\n\nWithout planning, a couple with $400,000 in savings would need to spend most of those savings down to approximately $2,000-$3,000 (the Medicaid resource limit for the institutionalized spouse) before the ill spouse qualifies. Planning uses legal tools that Medicaid specifically allows to protect much of those assets — for the healthy spouse, for heirs, or for other purposes.\n\nMedicaid planning is legal and explicitly contemplated by federal and state Medicaid law. The existence of exemptions, trust structures, and spousal protections in the law is not a loophole — Congress and state legislatures created these provisions intentionally.',
+      },
+      {
+        heading: 'The 5-Year Look-Back Period',
+        body: 'The Medicaid 5-year lookback is the central timing constraint in all Medicaid planning. When you apply for Medicaid long-term care, the state reviews all financial transactions — asset transfers, gifts, withdrawals — made in the previous 60 months (5 years). Transfers made for less than fair market value during this window create a penalty period: a period of Medicaid ineligibility calculated by dividing the transferred amount by the state\'s average daily nursing home cost.\n\nFor example: if you transferred $100,000 to your children 3 years before applying for Medicaid, and your state\'s average nursing home cost is $10,000/month, you face a 10-month penalty period of Medicaid ineligibility — even if you now have no assets. During the penalty period, you are responsible for the full cost of care.\n\nThe lookback does not apply to all transactions. Transfers to a spouse, transfers to a disabled child, and payments for fair market value services do not create penalties. Elder law attorneys structure transactions specifically to avoid lookback penalties.\n\nThe lookback for community-based Medicaid (home and assisted living care) has been extended to 2.5 years in some states under recent federal changes. Your elder law attorney will know the specific rules in your state.',
+      },
+      {
+        heading: 'Medicaid-Exempt Assets',
+        body: 'Not all assets count toward the Medicaid resource limit. Exempt assets — which do not affect Medicaid eligibility — include:\n\n**Primary home**: The home is generally exempt from Medicaid eligibility assessment while a community spouse lives there. Medicaid may pursue estate recovery after both spouses die, which is why trust planning often includes the home.\n\n**One vehicle**: One car of any value is typically exempt.\n\n**Retirement accounts (in some states)**: IRA and 401(k) assets in payout status are often exempt in states that treat them as income rather than assets — but this varies significantly by state.\n\n**Personal belongings**: Clothing, furniture, and personal effects are exempt.\n\n**Prepaid irrevocable funeral**: A prepaid funeral arrangement in an irrevocable trust is generally exempt up to a reasonable limit.\n\n**Whole life insurance (small face value)**: Life insurance policies with small face values are often exempt.\n\nThe home is the most critical exempt asset, and protecting it from Medicaid estate recovery — particularly after the community spouse dies — is one of the primary objectives of Medicaid trust planning.',
+      },
+      {
+        heading: 'Legal Planning Strategies',
+        body: 'Elder law attorneys use several legal tools that Medicaid explicitly allows:\n\n**Irrevocable Medicaid Asset Protection Trust (MAPT)**: An irrevocable trust that moves assets outside the Medicaid-countable universe. Assets transferred to a MAPT more than 5 years before applying for Medicaid are fully protected. The grantor gives up direct access to principal (interest/income can often still be paid to the grantor), which is the trade-off for protection. Commonly used to protect the home and liquid assets.\n\n**Caregiver agreements**: A formal legal agreement compensating a family member for documented caregiving services at fair market rate. Care provided under a written agreement is not a gift — it is compensation for services rendered. This converts potential gifted assets into legitimate payments while keeping a parent cared for at home.\n\n**Spousal asset transfers**: Medicaid allows transfers between spouses without penalty. An elder law attorney can transfer excess assets from the institutionalized spouse to the community spouse before or during the Medicaid application, maximizing what the healthy spouse keeps under the Community Spouse Resource Allowance (CSRA).\n\n**Medicaid-compliant annuities**: In some states, a spouse can convert countable assets into an immediate annuity that pays a monthly income to the community spouse. This converts an asset into an income stream, reducing the countable asset below the Medicaid limit while the healthy spouse continues to receive monthly payments.',
+      },
+      {
+        heading: 'When to Start Medicaid Planning',
+        body: 'The ideal time to start Medicaid planning is 5 years before you anticipate needing nursing home care — outside the lookback window, when all planning options are available. For most people, this means beginning in their early 70s if there is any family history of dementia, Alzheimer\'s, or other conditions requiring long-term care.\n\nCrisis planning — inside the lookback window — is still possible and usually significantly better than no planning. An elder law attorney doing crisis Medicaid planning can identify what transfers are still permissible, optimize spousal asset transfers, structure a MAPT for assets that can still be moved, and use annuity strategies to reduce countable assets even within the lookback window.\n\nWaiting until a parent is already in a nursing home and has spent most of their assets is the worst-case scenario. Even one year of advance notice to an elder law attorney can save tens of thousands of dollars in assets.',
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is Medicaid planning legal?',
+        a: 'Yes. Medicaid planning uses legal strategies specifically permitted by federal and state Medicaid law — trusts, spousal transfers, caregiver agreements, and other tools that Congress and state legislatures built into the statute. An elder law attorney does not help clients commit fraud; they help clients use all legally available tools to protect assets before or during the Medicaid process. The same legal planning philosophy applies to tax planning, estate planning, and benefits planning in every area of law.',
+      },
+      {
+        q: 'What assets does Medicaid count when determining eligibility?',
+        a: 'Countable assets include cash, bank accounts, investment accounts, stocks, bonds, real estate (other than the primary home in certain conditions), second homes, and most retirement accounts above minimum required distributions. Exempt assets — which do not count — include the primary home (while a community spouse lives there), one vehicle, personal belongings, prepaid funeral arrangements, and in many states, retirement accounts in payout status. The exact list varies by state. Your elder law attorney will conduct a full asset inventory at intake.',
+      },
+      {
+        q: 'Can I give my house to my children to qualify for Medicaid?',
+        a: 'Transferring the house to children as a gift within the 5-year lookback period will create a Medicaid penalty period — a period of ineligibility calculated on the value transferred. To be protected, a home transfer must occur more than 5 years before applying for Medicaid, be transferred to a Medicaid-compliant trust rather than directly to children, or qualify for one of several specific exemptions (transfer to a caregiver child who lived in the home, transfer to a disabled child, etc.). Do not transfer the house without consulting an elder law attorney first — the tax and Medicaid consequences depend entirely on how it is done.',
+      },
+      {
+        q: 'How does Medicaid planning protect my spouse?',
+        a: 'Federal law provides Medicaid "spousal impoverishment" protections specifically to prevent a healthy community spouse from being impoverished when their partner needs nursing home care. The key protection is the Community Spouse Resource Allowance (CSRA) — the maximum assets the community spouse can keep while their partner qualifies for Medicaid. The CSRA is $30,828-$154,140 depending on state and year. Elder law attorneys maximize what the community spouse keeps by restructuring assets before the Medicaid application, using spousal transfers, and in some states, using spousal refusal strategies.',
+      },
+    ],
+    cta: 'Looking for an elder law attorney who specializes in Medicaid planning? Search our directory to find verified specialists near you.',
+  },
 }
 
 interface PageProps {
