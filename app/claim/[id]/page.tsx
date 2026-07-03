@@ -1,18 +1,18 @@
 'use client'
 
-import { useState, useEffect, use } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Scale, CheckCircle, Loader2, AlertCircle, Star } from 'lucide-react'
 import { createClient } from '@supabase/supabase-js'
 
 interface PageProps {
-  params: Promise<{ id: string }>
-  searchParams: Promise<{ token?: string; verified?: string }>
+  params: { id: string }
+  searchParams: { token?: string; verified?: string }
 }
 
 export default function ClaimPage({ params, searchParams }: PageProps) {
-  const { id } = use(params)
-  const { token, verified } = use(searchParams)
+  const { id } = params
+  const { token, verified } = searchParams
 
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
@@ -249,3 +249,4 @@ export default function ClaimPage({ params, searchParams }: PageProps) {
     </div>
   )
 }
+
