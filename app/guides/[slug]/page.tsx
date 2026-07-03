@@ -331,6 +331,88 @@ const GUIDES: Record<string, Guide> = {
     ],
     cta: 'Looking for an elder law attorney who specializes in Medicaid planning? Search our directory to find verified specialists near you.',
   },
+
+  'veterans-benefits-elder-law': {
+    slug: 'veterans-benefits-elder-law',
+    title: 'VA Benefits and Elder Law: Aid & Attendance Explained',
+    metaTitle: 'VA Aid & Attendance for Seniors: Elder Law Attorney Guide | ElderLawyerDirectory.com',
+    metaDescription: 'VA Aid & Attendance pays up to $2,727/month for wartime veterans who need help with daily activities. An elder law attorney helps you qualify and avoid Medicaid conflicts.',
+    intro: 'Most wartime veterans who need help with daily activities — dressing, bathing, medication management — have never heard of VA Aid & Attendance. It pays up to $2,727 per month for a married veteran, $1,794 for a single veteran, or $1,154 for a surviving spouse. It is not based on a service-connected disability. It is available to any wartime veteran (or surviving spouse) who served at least 90 days of active duty with one day during a period of war, is discharged honorably, and meets medical and financial criteria. Hundreds of thousands of eligible veterans and spouses are not receiving this benefit because they do not know it exists.',
+    sections: [
+      {
+        heading: 'Who Qualifies for VA Aid & Attendance',
+        body: 'Aid & Attendance (A&A) is an enhanced pension benefit — not a disability compensation payment. To qualify:\n\n**Service requirement:** At least 90 days of active duty, with at least one day during a qualifying wartime period (WWII, Korea, Vietnam, Gulf War, and others). The veteran does not need to have served in combat or overseas.\n\n**Medical requirement:** The veteran (or surviving spouse) must need assistance with activities of daily living (ADLs) — such as bathing, dressing, eating, or toileting — due to a physical or mental condition. Dementia, Parkinson\'s disease, blindness, and age-related functional decline all qualify. A physician must certify the need.\n\n**Financial requirement:** Assets must be below a threshold that changes annually (approximately $150,000 for a single veteran in 2025, indexed to the MAPR). Countable assets include savings, investments, and real estate other than a primary home. Certain assets are excluded, including the home, vehicle, and personal property. Income is also considered, with a formula that accounts for unreimbursed medical expenses — including assisted living and in-home care costs, which often eliminate the effective income threshold for people paying for care.',
+      },
+      {
+        heading: 'Aid & Attendance Benefit Amounts (2025)',
+        body: 'Current monthly maximum benefit amounts:\n\n— Married veteran (with spouse): $2,727/month ($32,724/year)\n— Single veteran: $1,794/month ($21,528/year)\n— Surviving spouse of a wartime veteran: $1,154/month ($13,848/year)\n— Housebound benefit (lower tier): $2,186/month for married veteran, $1,379 for single\n\nThese amounts are adjusted annually for COLA. The benefit pays directly to the veteran or surviving spouse and can be used for any purpose — home care, assisted living, nursing home care, or other expenses.\n\nThe benefit is tax-free. It is completely separate from service-connected disability compensation (which requires a condition connected to military service). A veteran can receive both disability compensation AND Aid & Attendance if they qualify for both.',
+      },
+      {
+        heading: 'The Medicaid-VA Conflict: Why Sequencing Matters',
+        body: 'Here is where it gets complicated — and why an elder law attorney experienced in both VA and Medicaid is valuable. The strategies for qualifying for VA Aid & Attendance and for Medicaid long-term care sometimes conflict:\n\n— **VA asset transfers:** The VA implemented a 36-month lookback in 2018 for pension benefits (Aid & Attendance is a pension). Transfers made within 36 months of a VA pension application can affect eligibility. This is shorter than Medicaid\'s 60-month lookback.\n\n— **VA annuities and Medicaid:** Annuities that are structured to help qualify for VA Aid & Attendance can sometimes create countable income that affects Medicaid eligibility.\n\n— **Sequencing:** In many situations, the right strategy is to use VA Aid & Attendance first (to fund assisted living or home care) while planning for eventual Medicaid eligibility — getting the benefit while also making sure the Medicaid lookback clock is running. An elder law attorney sequences this correctly.\n\nVeterans and their families should work with an attorney (not a financial product salesperson) to evaluate VA and Medicaid benefits together. Many of the financial products marketed to veterans as "VA planning" are sold by non-attorneys and can inadvertently compromise Medicaid eligibility.',
+      },
+      {
+        heading: 'How to Apply for VA Aid & Attendance',
+        body: 'Applications for VA pension and Aid & Attendance are submitted to the VA regional office. Required documents include: military discharge papers (DD-214), medical documentation from a physician establishing the need for assistance with ADLs, evidence of care costs (bills from in-home aide, assisted living, nursing home), and financial documentation.\n\nApplications can be filed by the veteran, a family member, or an attorney. An elder law attorney or accredited VA claims agent can prepare and submit a stronger application, including identifying unreimbursed medical expenses that significantly reduce the effective income calculation and often make otherwise-ineligible veterans eligible. Processing time is typically 3–6 months; the benefit is backdated to the date of the application, so filing quickly matters.',
+      },
+    ],
+    faqs: [
+      {
+        q: 'Is VA Aid & Attendance the same as disability compensation?',
+        a: 'No. VA disability compensation requires a service-connected condition — a disability caused by or aggravated during military service. Aid & Attendance is a pension benefit available to wartime veterans (any wartime service, not necessarily combat-related) who need help with daily activities due to any condition — including age-related decline, dementia, or conditions unrelated to service. A veteran can receive both benefits if they qualify for both.',
+      },
+      {
+        q: 'Can a surviving spouse get Aid & Attendance?',
+        a: 'Yes — surviving spouses of wartime veterans qualify for a Survivors Pension with Aid & Attendance if they were married to the veteran at the time of death, have not remarried, and meet the medical and financial criteria. The surviving spouse benefit is currently $1,154/month. The spouse does not need to be elderly — just to need assistance with ADLs due to a disability or age-related condition.',
+      },
+      {
+        q: 'Do I need an attorney to apply for Aid & Attendance?',
+        a: 'Not legally required — the VA application is a government form that anyone can file. However, an accredited VA claims agent or elder law attorney significantly increases the quality of the application, identifies all eligible deductions (unreimbursed medical expenses), and ensures the application does not inadvertently create issues for Medicaid planning. For veterans who also anticipate needing Medicaid long-term care, consulting an elder law attorney for coordinated planning is strongly recommended.',
+      },
+    ],
+    cta: 'Looking for an elder law attorney who understands VA benefits and Medicaid planning together? Search our directory for verified elder law specialists.',
+  },
+
+  'guardianship-vs-power-of-attorney': {
+    slug: 'guardianship-vs-power-of-attorney',
+    title: 'Guardianship vs. Power of Attorney: What\'s the Difference?',
+    metaTitle: 'Guardianship vs. Power of Attorney: Elder Law Guide | ElderLawyerDirectory.com',
+    metaDescription: 'A power of attorney is signed while competent; guardianship is ordered by a court when someone can no longer sign. Understanding the difference determines which path your family needs.',
+    intro: 'Families navigating an aging parent\'s incapacity often face a fundamental question: do we need a power of attorney or guardianship? The answer depends entirely on timing. A power of attorney is a document signed voluntarily while a person is legally competent. Guardianship (or conservatorship) is a court-ordered process when a person can no longer make decisions for themselves and no power of attorney exists. The first is a planning tool. The second is a crisis response — expensive, public, and slow. Elder law attorneys push clients to execute powers of attorney years before they might be needed, precisely because the alternative is guardianship.',
+    sections: [
+      {
+        heading: 'Power of Attorney: What It Is and What It Does',
+        body: 'A power of attorney (POA) is a legal document in which one person (the "principal") gives another person (the "agent" or "attorney-in-fact") legal authority to act on their behalf. A **financial power of attorney** authorizes the agent to manage financial matters — banking, investments, real estate, taxes, and business transactions. A **healthcare power of attorney** (or healthcare proxy) authorizes the agent to make medical decisions when the principal cannot. A **living will** (or advance directive) records the principal\'s instructions about specific medical treatments (life support, resuscitation) if they are incapacitated and unable to communicate.\n\nThe critical qualifier: all of these documents must be signed while the principal is legally competent. A person who has been diagnosed with dementia and has moderate cognitive impairment may no longer have legal capacity to sign a valid power of attorney — depending on the state and the degree of impairment. If the window closes before these documents are executed, the family has no alternative but guardianship.\n\nFor a durable power of attorney to be effective during incapacity, it must be specifically drafted as "durable" — meaning it remains valid even when the principal loses decision-making capacity. Non-durable POAs automatically terminate upon incapacity. Most elder law attorneys use durable POAs by default, but generic online templates may not include the durability language in a legally sufficient form.',
+      },
+      {
+        heading: 'When Guardianship Becomes Necessary',
+        body: 'Guardianship (authority over personal and medical decisions) and conservatorship (authority over finances) are court-ordered processes that substitute for a power of attorney when one does not exist or is legally inadequate. Family members must file a petition with the probate court, obtain medical assessments of the proposed ward\'s incapacity, give legal notice to the proposed ward and close relatives, attend a hearing before a judge, and be appointed by the court before they have legal authority to act.\n\nThe process is:\n— **Slow:** Typically 2–6 months from filing to appointment, longer in contested cases\n— **Expensive:** Court costs, attorney fees for both the petitioner and the ward, guardian ad litem fees — typically $5,000–$20,000 or more\n— **Public:** Court proceedings are public record\n— **Ongoing:** Guardians must file annual reports with the court, get court approval for major financial decisions, and maintain ongoing judicial oversight\n\nGuardianship is not inherently bad — it exists because sometimes people who need protection have no other option. But it is an expensive and burdensome substitute for planning that should have happened years earlier.',
+      },
+      {
+        heading: 'Durable POA vs. Guardianship: A Practical Comparison',
+        body: 'The core differences:\n\n**Cost:** A durable financial and healthcare POA package costs $500–$2,000 from an elder law attorney. Guardianship proceedings cost $5,000–$20,000+ and continue to cost annually.\n\n**Timing:** A POA is signed in a single appointment when capacity exists. Guardianship takes months and requires a court finding of incapacity.\n\n**Privacy:** A POA is a private document. Guardianship is a public court proceeding.\n\n**Ongoing requirements:** A POA has no ongoing reporting requirements. A guardian files annual reports with the court and needs court approval for significant decisions.\n\n**Who controls it:** The principal controls a POA — they can revoke it at any time while competent, and they choose their agent. A court appoints the guardian, who may not be the person the ward would have chosen.',
+      },
+      {
+        heading: 'What If Capacity Is Questionable?',
+        body: 'The trickiest situations arise when an older adult has diminished but not completely absent capacity — early to moderate dementia, for example. Legal capacity exists on a spectrum and varies by the type of decision. The legal standard for signing a power of attorney ("testamentary capacity") is lower than the standard for making complex financial decisions — but is higher than zero.\n\nAn elder law attorney experienced in capacity issues can conduct a careful interview, potentially consult with the person\'s physician, and document the signing in ways that are more defensible if later challenged. If there is any question about capacity, acting sooner rather than later is critical — the window often closes faster than families expect. A qualified attorney can often work with someone in early dementia to execute valid documents when it would be impossible for someone further along in the disease.',
+      },
+    ],
+    faqs: [
+      {
+        q: 'Can I be both the agent under a power of attorney and a guardian?',
+        a: 'If your parent has a valid durable power of attorney naming you as agent, you generally do not need guardianship — the POA gives you the authority to act. Guardianship only becomes necessary when there is no valid POA. If a guardianship proceeding is filed despite an existing POA, courts typically recognize the POA as sufficient unless there is evidence of abuse or the POA is inadequate for the situation.',
+      },
+      {
+        q: 'Can a power of attorney be revoked?',
+        a: 'Yes — while the principal has legal capacity, they can revoke a power of attorney at any time by signing a written revocation and notifying the agent and any institutions that have relied on the POA (banks, etc.). Once capacity is lost, the principal can no longer revoke the POA. A guardian appointed by a court can sometimes seek to revoke a POA if it is found to have been improperly executed or if the agent is not acting in the principal\'s best interest.',
+      },
+      {
+        q: 'What is the difference between a guardian and a conservator?',
+        a: 'The terminology varies by state, but the distinction is usually: a guardian has authority over personal and healthcare decisions (where the person lives, medical care, daily activities). A conservator has authority over financial decisions (bank accounts, investments, real estate, contracts). In some states, "guardianship" encompasses both. A court can appoint a guardian, a conservator, or both, depending on what the situation requires. An elder law attorney can explain how your state uses these terms.',
+      },
+    ],
+    cta: 'Don\'t wait until guardianship is the only option. Find an elder law attorney near you to execute powers of attorney while you still can.',
+  },
 }
 
 interface PageProps {
