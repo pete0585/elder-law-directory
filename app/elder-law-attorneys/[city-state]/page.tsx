@@ -176,6 +176,41 @@ const CITY_DATA: Record<string, CityInfo> = {
     medicaidNote: 'North Carolina Medicaid (NC Medicaid) has a strict 5-year lookback and income limit of $2,742/month. Charlotte elder law attorneys navigate NC\'s estate recovery provisions — NC recovers against the full probate estate — and use trusts and non-probate transfers to minimize exposure.',
     urgencyNote: 'Mecklenburg County\'s assisted living and memory care facilities are among the most expensive in the Southeast. Charlotte elder law attorneys are experienced in NC\'s Special Assistance program (an NC Medicaid alternative for assisted living) which has different rules than nursing home Medicaid.',
   },
+  'boston-ma': {
+    city: 'Boston',
+    state: 'MA',
+    intro: 'Massachusetts has some of the most complex elder law terrain in the country — MassHealth (Massachusetts Medicaid) has strict community spouse rules, estate recovery provisions, and a robust appeals process. Boston elder law attorneys navigate these rules daily for families across Middlesex, Norfolk, and Suffolk counties.',
+    medicaidNote: 'MassHealth income limits and asset thresholds are among the most restrictive in the Northeast. The MassHealth 5-year lookback is strictly enforced, and MassHealth estate recovery extends to the estates of deceased beneficiaries. Boston elder law attorneys use Medicaid Asset Protection Trusts and other planning tools to protect assets before the lookback window closes.',
+    urgencyNote: 'A nursing home crisis in Massachusetts averages $12,000–$15,000 per month for a private-pay patient — the financial pressure is immediate. Boston elder law attorneys who specialize in crisis Medicaid planning can often protect significant assets even in an emergency. Do not wait for a placement crisis before consulting an attorney.',
+  },
+  'minneapolis-mn': {
+    city: 'Minneapolis',
+    state: 'MN',
+    intro: 'Hennepin County and the greater Twin Cities metro is Minnesota\'s primary elder law market. Minnesota Medical Assistance (Medicaid) has specific rules governing nursing home care and community waiver programs. Minneapolis elder law attorneys work with the full range of planning tools — from Medicaid Asset Protection Trusts to VA Aid and Attendance for the region\'s large veteran population.',
+    medicaidNote: 'Minnesota Medical Assistance has income and asset limits similar to federal Medicaid standards, with a 5-year lookback and estate recovery provisions. Minnesota also offers HCBS (Home and Community Based Services) waivers that allow seniors to receive care at home while on Medicaid — a planning option that Minneapolis elder law attorneys actively use to delay or avoid nursing home placement.',
+    urgencyNote: 'Minnesota\'s nursing home and assisted living market is competitive and expensive. A crisis placement in Hennepin or Ramsey County can run $8,000–$12,000/month. The right elder law attorney can often restructure assets to protect them — but the window is narrower the longer you wait.',
+  },
+  'nashville-tn': {
+    city: 'Nashville',
+    state: 'TN',
+    intro: 'Middle Tennessee\'s elder law market has grown rapidly alongside Nashville\'s population boom. Tennessee Medicaid (TennCare) governs nursing home coverage in Davidson, Williamson, and surrounding counties. Nashville elder law attorneys handle TennCare planning, guardianship for Davidson County Probate Court, and estate planning for Tennessee\'s growing retiree population.',
+    medicaidNote: 'TennCare (Tennessee Medicaid) uses a managed care organization model for long-term care services. TennCare nursing home eligibility requires assets below $2,000 for a single individual and follows federal spousal impoverishment protections. The 5-year lookback and estate recovery apply. Tennessee does not have a state income tax, which simplifies some estate planning aspects but doesn\'t change Medicaid asset rules.',
+    urgencyNote: 'Nashville\'s rapid growth has increased demand for elder care facilities, but also increased competition for attorney time. If a parent needs placement, don\'t delay in consulting a Nashville TennCare planning attorney — waiting can cost assets unnecessarily.',
+  },
+  'las-vegas-nv': {
+    city: 'Las Vegas',
+    state: 'NV',
+    intro: 'Clark County is Nevada\'s largest elder law market, serving a large retiree and snowbird population. Nevada Medicaid has specific rules for long-term care eligibility, and Las Vegas elder law attorneys navigate these rules alongside Nevada\'s unique assets — including gaming interests, real estate, and Nevada\'s favorable trust and estate laws.',
+    medicaidNote: 'Nevada Medicaid follows federal standards for nursing home Medicaid eligibility: 5-year lookback, $2,000 asset limit for single applicants, and spousal impoverishment protections. Nevada has no state income tax and no state estate tax, making it a relatively favorable estate planning environment. However, Medicaid rules are federal-standard — Nevada\'s tax benefits don\'t help with Medicaid asset limits.',
+    urgencyNote: 'Las Vegas nursing homes and senior care facilities span a wide quality and price range. Medicaid-certified nursing homes are available, but quality varies significantly. A Las Vegas elder law attorney can advise not just on Medicaid eligibility but on navigating Clark County\'s senior care market.',
+  },
+  'portland-or': {
+    city: 'Portland',
+    state: 'OR',
+    intro: 'Multnomah County is Oregon\'s primary elder law market. Oregon Medicaid (Oregon Health Plan, or OHP) covers nursing home care under specific eligibility rules. Portland elder law attorneys navigate OHP long-term care programs, Multnomah County Probate Court for guardianship, and Oregon\'s estate planning laws for the region\'s aging population.',
+    medicaidNote: 'Oregon Medicaid for long-term care follows federal standards with a 5-year lookback and asset limits of $2,000 for a single applicant. Oregon has a state estate tax with an exemption threshold of $1 million — lower than the federal threshold — which means estate planning for middle-class Oregon families often intersects with both Medicaid planning and estate tax minimization.',
+    urgencyNote: 'Oregon\'s estate tax threshold means many Portland families need both Medicaid planning and state estate tax planning simultaneously. A Portland elder law attorney with expertise in both areas can address the full picture — not just Medicaid eligibility, but minimizing Oregon estate tax exposure for the surviving spouse and heirs.',
+  },
 }
 
 interface PageProps {
