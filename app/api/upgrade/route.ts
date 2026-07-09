@@ -8,7 +8,6 @@ export async function POST(request: NextRequest) {
 
   try {
     const body = await request.json()
-    // Accept both camelCase (listingId) and snake_case (listing_id) for compatibility
     listingId = body?.listingId ?? body?.listing_id
     tier = body?.tier
   } catch {
@@ -40,7 +39,6 @@ export async function POST(request: NextRequest) {
       payment_method_types: ['card'],
       line_items: [{ price: priceId, quantity: 1 }],
       metadata: { listing_id: listingId, tier },
-      customer_email: listing.email ?? undefined,
       success_url: `${siteUrl}/claim/${listingId}?verified=true&tier=${tier}`,
       cancel_url: `${siteUrl}/claim/${listingId}`,
       allow_promotion_codes: true,
