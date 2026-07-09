@@ -3,18 +3,18 @@ import { createServiceClient } from '@/lib/supabase/server'
 import { stripe, VERIFIED_PRICE_ID, FEATURED_PRICE_ID } from '@/lib/stripe'
 
 export async function POST(request: NextRequest) {
-  let listingId: string | undefined
-  let tier: string | undefined
+  let body: { listingId?: string; listing_id?: string; tier?: string }
 
   try {
-    const body = await request.json()
-    listingId = body?.listingId ?? body?.listing_id
-    tier = body?.tier
+    body = await request.json()
   } catch {
     return NextResponse.json({ error: 'Invalid request' }, { status: 400 })
   }
 
-  if (!listingId || !['verified', 'featured'].includes(tier ?? '')) {
+  const listingId = body?.listingId ?? body?.listing_id
+  const tier = body?.tier
+
+  if (!listingId || !tier || !['verified', 'featured'].includes(tier)) {
     return NextResponse.json({ error: 'Invalid request' }, { status: 400 })
   }
 
