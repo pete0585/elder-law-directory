@@ -22,8 +22,8 @@ export default function ListingDetail({ listing, monthlyViews = 0, isClaimed: is
     description: listing.bio ?? `Elder law attorney in ${location}`,
     url: `https://elderlawyerdirectory.com/listings/${listing.slug}`,
     image: listing.photo_url ?? undefined,
-    telephone: listing.phone ?? undefined,
-    email: listing.email ?? undefined,
+    telephone: isClaimed ? (listing.phone ?? undefined) : undefined,
+    email: isClaimed ? (listing.email ?? undefined) : undefined,
     address: {
       '@type': 'PostalAddress',
       addressLocality: listing.city,
