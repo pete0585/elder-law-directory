@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic"
 
 export const metadata: Metadata = {
   title: 'Find Elder Law Attorneys Near You | ElderLawyerDirectory.com',
-  description: 'When your parent needs a nursing home and you need a Medicaid plan — find an elder law attorney who specializes in exactly this. Search 2,500+ attorneys by city, state, and practice area.',
+  description: 'Need a nursing home plan? Find an elder law attorney who specializes in Medicaid planning. Search 2,500+ attorneys by city, state, and practice area.',
   alternates: { canonical: 'https://elderlawyerdirectory.com' },
 }
 
