@@ -30,8 +30,8 @@ All vars are already set in Vercel. This is for local dev only.
 | `NEXT_PUBLIC_SITE_URL` | `https://elderlawyerdirectory.com` |
 | `STRIPE_SECRET_KEY` | (from bootstrap output) |
 | `STRIPE_WEBHOOK_SECRET` | `[REDACTED-last4=783a]` |
-| `STRIPE_VERIFIED_PRICE_ID` | `price_1TduqsGzK9SiblueIHdMkZxF` |
-| `STRIPE_FEATURED_PRICE_ID` | `price_1TduqtGzK9Siblue6eE7CIGu` |
+| `STRIPE_VERIFIED_PRICE_ID` | `price_REPLACE_ME` |
+| `STRIPE_FEATURED_PRICE_ID` | `price_REPLACE_ME` |
 | `RESEND_API_KEY` | (from bootstrap output) |
 | `RESEND_FROM_EMAIL` | `hello@mail.elderlawyerdirectory.com` |
 | `NEXT_PUBLIC_DIRECTORY_SLUG` | `elder-law` |
@@ -98,8 +98,8 @@ Inbound replies route to `https://www.elderlawyerdirectory.com/api/inbound-email
 
 ## IndexNow
 
-Key file: `public/1d5d7ac59e3d78e161ee71458df23e21.txt`  
-Key value: `1d5d7ac59e3d78e161ee71458df23e21`
+Key file: `public/YOUR_INDEXNOW_KEY.txt`  
+Key value: `YOUR_INDEXNOW_KEY` (32-char hex; do not commit the live key)
 
 Submit sitemap after deploy:
 ```bash
