@@ -1,10 +1,12 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { createClient } from "@/lib/supabase/server"
+import { SITE_URL } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: "Best Elder Law Attorney in San Diego, CA | Elder Law Attorney Directory",
   description: "Find elder law attorney in San Diego, California. 29+ listed. Filter by city and compare providers.",
+  alternates: { canonical: `${SITE_URL}/elder-law-attorneys/san-diego-ca` },
 }
 
 async function getListings() {
