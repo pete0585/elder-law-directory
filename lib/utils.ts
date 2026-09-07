@@ -1,3 +1,5 @@
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://elderlawyerdirectory.com').replace(/\/$/, '')
+
 export function cn(...classes: (string | undefined | null | false)[]) {
   return classes.filter(Boolean).join(' ')
 }
