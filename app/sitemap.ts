@@ -1,3 +1,4 @@
+import {articles as editorialArticles} from '@/lib/editorial-blog'
 import { readdir } from 'node:fs/promises'
 import path from 'node:path'
 import type { MetadataRoute } from 'next'
@@ -22,7 +23,7 @@ async function getStaticCitySlugs(): Promise<string[]> {
   return slugs.sort()
 }
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+async function originalSitemap(): Promise<MetadataRoute.Sitemap> {
   const base = SITE_URL
 
   const slugs = await getAllSlugs()
@@ -72,3 +73,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...listings,
   ]
 }
+
+export default async function editorialSitemap():Promise<MetadataRoute.Sitemap>{const existing=await originalSitemap();const site="https://elderlawyerdirectory.com";return [...existing,{url:site+'/blog',changeFrequency:'weekly'},...editorialArticles().map(p=>({url:site+'/blog/'+p.slug,lastModified:new Date(p.date),changeFrequency:'monthly' as const}))]}
