@@ -66,12 +66,22 @@ export default function HomePage() {
               <span className="text-brand-amber text-sm font-semibold">Elder Law Specialists</span>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
-              Find a lawyer who actually<br />
-              <span className="text-brand-amber">understands elder law.</span>
-            </h1>
+            Find trusted elder law attorneys near you
+          </h1>
             <p className="text-gray-300 text-lg mb-8 leading-relaxed max-w-2xl">
-              When your parent is in the hospital and Medicaid crisis planning is urgent, you need a specialist — not a general estate planning attorney. Find elder law attorneys near you who handle Medicaid planning, guardianship, and long-term care.
-            </p>
+            Browse elder law attorneys by state, specialty, and Medicaid planning experience — and connect directly. Free, always.
+          </p>
+          <p className="text-sm text-gray-500 mt-4">
+            Are you a elder law attorney?{' '}
+            <a
+              href="https://studiozerohq.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:opacity-80"
+            >
+              List your practice free →
+            </a>
+          </p>
 
             <Suspense fallback={null}>
               <SearchBar large className="max-w-2xl" />
