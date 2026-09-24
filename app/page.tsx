@@ -231,7 +231,7 @@ export default function HomePage() {
             </div>
             <h2 className="text-2xl font-bold mb-2">Your profile is already in our directory.</h2>
             <p className="text-gray-300 max-w-xl">
-              Claim it free.25/month vs. ElderLawAnswers&apos; $175/month. One Medicaid planning client covers your listing for 75 years.
+              Claim your listing free.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
