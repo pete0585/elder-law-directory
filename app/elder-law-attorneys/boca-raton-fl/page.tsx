@@ -17,6 +17,7 @@ async function getListings() {
     .eq("city", "Boca Raton")
     .eq("state", "FL")
     .eq("is_active", true)
+    .eq("is_approved", true)
     .limit(24)
   return data ?? []
 }

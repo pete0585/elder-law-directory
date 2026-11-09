@@ -17,6 +17,7 @@ async function getListings() {
     .eq("city", "Sacramento")
     .eq("state", "CA")
     .eq("is_active", true)
+    .eq("is_approved", true)
     .limit(24)
   return data ?? []
 }

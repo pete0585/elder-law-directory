@@ -43,6 +43,7 @@ export async function getListingBySlug(slug: string): Promise<Listing | null> {
     .select('*')
     .eq('slug', slug)
     .eq('is_active', true)
+    .eq('is_approved', true)
     .single()
 
   if (error) return null
@@ -55,6 +56,7 @@ export async function getListingById(id: string): Promise<Listing | null> {
     .from('elder_listings')
     .select('*')
     .eq('id', id)
+    .eq('is_approved', true)
     .single()
 
   if (error) return null
