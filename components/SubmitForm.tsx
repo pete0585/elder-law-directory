@@ -1,17 +1,16 @@
 'use client';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { CheckCircle } from 'lucide-react';
-import { slugify } from '@/lib/utils';
-import { createClient } from '@/lib/supabase/client';
 const schema = z.object({
     full_name: z.string().min(2, 'Full name is required'),
     firm_name: z.string().optional(),
     email: z.string().email('Valid email required'),
     phone: z.string().optional(),
     website: z.string().url('Must be a valid URL').optional().or(z.literal('')),
+    address_line1: z.string().optional(),
     city: z.string().min(2, 'City is required'),
     state: z.string().min(2, 'State is required'),
     zip: z.string().optional(),
@@ -40,6 +39,9 @@ const STATE_OPTIONS = [
 export default function SubmitForm() {
     const [submitted, setSubmitted] = useState(false);
     const [submitting, setSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState('');
+    const [serverFields, setServerFields] = useState<Record<string, string>>({});
+    const honeypot = useRef('');
     const [selectedAreas, setSelectedAreas] = useState<string[]>([]);
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
         resolver: zodResolver(schema),
@@ -50,36 +52,34 @@ export default function SubmitForm() {
     }
     async function onSubmit(data: FormData) {
         setSubmitting(true);
-        const supabase = createClient();
-        const baseSlug = slugify(`${data.full_name}-${data.city}-${data.state}`);
-        const slug = `${baseSlug}-${Math.random().toString(36).slice(2, 7)}`;
-        await supabase.from('elder_listings').insert({
-            slug,
-            full_name: data.full_name,
-            firm_name: data.firm_name || null,
-            email: data.email || null,
-            phone: data.phone || null,
-            website: data.website || null,
-            city: data.city,
-            state: data.state,
-            zip: data.zip || null,
-            bio: data.bio || null,
-            practice_areas: selectedAreas,
-            accepts_remote: data.accepts_remote ?? false,
-            free_consultation: data.free_consultation ?? false,
-            listing_tier: 'free',
-            is_active: true,
-            is_approved: true,
-            source: 'self_submit',
-        });
-        setSubmitting(false);
-        setSubmitted(true);
+        setSubmitError('');
+        setServerFields({});
+        try {
+            const response = await fetch('/api/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ...data, practice_areas: selectedAreas, contact_fax: honeypot.current || undefined }),
+            });
+            const result = await response.json().catch(() => ({}));
+            if (!response.ok || !result.success) {
+                setServerFields(result.fields ?? {});
+                setSubmitError(result.error || 'Your listing could not be submitted. Your entries are still here; please try again.');
+                return;
+            }
+            setSubmitted(true);
+        }
+        catch {
+            setSubmitError('We could not reach the server. Your entries are still here; please try again.');
+        }
+        finally {
+            setSubmitting(false);
+        }
     }
     if (submitted) {
         return (<div className="bg-white rounded-xl border border-surface-border shadow-sm p-8 text-center">
         <CheckCircle className="w-14 h-14 text-green-500 mx-auto mb-4" aria-label="Success"/>
-        <h2 className="text-xl font-bold text-gray-900 mb-2">Listing Submitted!</h2>
-        <p className="text-gray-600"> Listings are free. Public contact details are available without payment. </p>
+        <h2 className="text-xl font-bold text-gray-900 mb-2">Listing Received!</h2>
+        <p className="text-gray-600"> Your free listing has been saved and is awaiting review. It will not appear publicly until it is approved. </p>
       </div>);
     }
     return (<form onSubmit={handleSubmit(onSubmit)} className="bg-white rounded-xl border border-surface-border shadow-sm p-6 space-y-5">
@@ -111,6 +111,11 @@ export default function SubmitForm() {
         <label className="block text-sm font-medium text-gray-700 mb-1">Website</label>
         <input {...register('website')} type="url" placeholder="https://yourfirm.com" className="w-full border border-surface-border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-slate"/>
         {errors.website && <p className="text-red-500 text-xs mt-1">{errors.website.message}</p>}
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-1">Street Address</label>
+        <input {...register('address_line1')} placeholder="123 Main St, Suite 100" className="w-full border border-surface-border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-slate"/>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -159,6 +164,10 @@ export default function SubmitForm() {
           <span className="text-sm text-gray-700">Free initial consultation</span>
         </label>
       </div>
+
+      <input type="text" name="contact_fax" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" onChange={(e) => { honeypot.current = e.target.value; }}/>
+
+      {submitError && <p role="alert" className="rounded border border-red-300 bg-red-50 text-red-900 p-3 text-sm">{submitError}{Object.values(serverFields).length > 0 && ` (${Object.values(serverFields).join('; ')})`}</p>}
 
       <button type="submit" disabled={submitting} className="w-full bg-brand-slate hover:bg-brand-slate-dark text-white font-semibold py-3 rounded-lg transition-colors disabled:opacity-60">
         {submitting ? 'Submitting...' : 'Submit Free Listing'}
