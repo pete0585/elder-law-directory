@@ -166,7 +166,7 @@ export default function ListingDetail({ listing, monthlyViews = 0, isClaimed: is
                   </div>
                   <span className="truncate">{listing.email}</span>
                 </a>)}
-              {listing.website && (<a href={listing.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-gray-700 hover:text-brand-slate transition-colors group">
+              {listing.website && (<a data-directory-action="website_click" href={listing.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-gray-700 hover:text-brand-slate transition-colors group">
                   <div className="w-8 h-8 bg-brand-slate/10 group-hover:bg-brand-slate/20 rounded-lg flex items-center justify-center transition-colors">
                     <Globe className="w-4 h-4 text-brand-slate" aria-label="Website"/>
                   </div>
