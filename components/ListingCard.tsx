@@ -69,7 +69,7 @@ export default function ListingCard({ listing }: ListingCardProps) {
                 <Phone className="w-4 h-4" aria-label="Phone"/>
                 {formatPhone(listing.phone)}
               </a>)}
-            {listing.website && (<a href={listing.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-brand-slate transition-colors">
+            {listing.website && (<a data-directory-action="website_click" href={listing.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-brand-slate transition-colors">
                 <Globe className="w-4 h-4" aria-label="Website"/>
                 Website
               </a>)}
